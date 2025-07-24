@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Интернет-магазин брендовой одежды">
+    
+    <!-- PWA мета-теги -->
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Dollar Clothing">
+    <link rel="apple-touch-icon" href="icon-192x192.png" >
+    
+    <title>Dollar Clothing - брендовая одежда</title>
+    
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon-192x192.png" type="image/png">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <img src="photo.jpg" alt="Логотип Dollar Clothing" class="logo">
+            <div class="header-text">
+                <h1>Добро пожаловать в Dollar Clothing</h1>
+                <p class="tagline">Эксклюзивная уличная одежда</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="products-section">
+            <h2 class="section-title">Наши товары</h2>
+            <div class="products-grid">
+                <a href="shorts.html" class="product-card">
+                    <img src="clothes1.jpg" alt="Dollar Shorts" class="product-image">
+                    <div class="product-info">
+                        <h3>Dollar Shorts</h3>
+                        <p>Эксклюзивные шорты</p>
+                    </div>
+                </a>
+                
+                <a href="hoodie.html" class="product-card">
+                    <img src="clothes2.webp" alt="Dollar Hoodie" class="product-image">
+                    <div class="product-info">
+                        <h3>Dollar Hoodie</h3>
+                        <p>Утепленный худи</p>
+                    </div>
+                </a>
+                
+                <a href="Zip.html" class="product-card">
+                    <img src="clothes3.jpg" alt="SZND Archive Zip-Hoodie" class="product-image">
+                    <div class="product-info">
+                        <h3>SZND Archive Zip-Hoodie</h3>
+                        <p>Стильная куртка-худи</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <nav class="footer-nav">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="about.html" class="nav-link">О нас</a>
+            <a href="contact.html" class="nav-link">Контакты</a>
+            <a href="#" class="nav-link">Корзина</a>
+        </nav>
+        <p class="copyright">&copy; 2023 Dollar Clothing. Все права защищены.</p>
+    </footer>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker зарегистрирован:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('Ошибка регистрации ServiceWorker:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
